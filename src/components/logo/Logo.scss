@@ -1,0 +1,12 @@
+$h: 35px;
+$w: 176px;
+$bgi: "../../img/icons.png";
+$bgp: (-177px -264px);
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  height: $h;
+  width: $w;
+  background: url("#{$bgi}") no-repeat $bgp;
+}

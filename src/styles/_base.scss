@@ -1,0 +1,17 @@
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $global_bg;
+  font-family: $global_ff;
+  font-size: $global_fz;
+  line-height: $global_lh;
+}
+
+.app-container {
+  max-width: $global_maw;
+  margin: 0 auto;
+}

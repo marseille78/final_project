@@ -1,0 +1,28 @@
+$bg: #fff;
+$bd: 1px solid rgba(0,0,0,.0975);
+$h: 84px;
+
+.app-header {
+  background-color: $bg;
+  border: $bd;
+  padding: 26px;
+  height: $h;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__item {
+    flex-grow: 0;
+
+    &:first-child,
+    &:last-child {
+      flex-grow: 1;
+    }
+  }
+
+  .app-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
