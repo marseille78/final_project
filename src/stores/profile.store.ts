@@ -4,13 +4,12 @@ import { IUserProfile } from "../types/app.types";
 
 export class ProfileStore {
   @observable
-  private _userName: string = '';
+  private _dataUserProfile: IUserProfile;
 
   private _provider: ProfileProvider;
 
   constructor(provider: ProfileProvider) {
     this._provider = provider;
-    console.log(this._userName);
   }
 
   public init(): void {
@@ -24,7 +23,8 @@ export class ProfileStore {
 
   @action
   private updateUserProfile(userProfile: IUserProfile) {
-    this._userName = userProfile.username;
-    console.log('userProfile: ', userProfile);
+    console.log('updateUserProfile:', userProfile);
+    this._dataUserProfile = userProfile;
+    console.log(this._dataUserProfile);
   }
 }
