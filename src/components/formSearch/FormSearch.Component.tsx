@@ -27,7 +27,7 @@ export class FormSearchComponent extends React.Component<IFormSearchProps> {
     this.props.onChangeValue(e.currentTarget.value);
   }
 
-  handleClear(e: any): void {
+  handleClear(e: React.MouseEvent<HTMLElement>): void {
     e.preventDefault();
     this.props.onChangeValue('');
   }

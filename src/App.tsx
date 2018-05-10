@@ -1,10 +1,15 @@
 import * as React from 'react';
 import './App.scss';
 import { HeaderComponent } from "./components/header/Header.Component";
+import { ProfileProvider } from "./providers/profile.provider";
+import { ProfileStore } from "./stores/profile.store";
 
 interface IAppState {
   searchValue: string;
 }
+
+const profileProvider = new ProfileProvider();
+const profileStore = new ProfileStore(profileProvider);
 
 class App extends React.Component<{}, IAppState> {
   constructor(props: any) {
@@ -21,7 +26,12 @@ class App extends React.Component<{}, IAppState> {
     });
   }
 
+  componentDidMount() {
+    profileStore.init();
+  }
+
   render() {
+    console.log(profileStore);
     return (
       <div className="App">
         <HeaderComponent
