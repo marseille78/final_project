@@ -13,7 +13,6 @@ export class ProfileProvider {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             const response = JSON.parse(xhr.response);
-            console.log('Provider: ', response.data);
             resolve(response.data);
           } else {
             reject(console.log('Error response'));

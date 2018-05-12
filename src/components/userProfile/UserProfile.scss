@@ -1,0 +1,38 @@
+@import "../../styles/vars";
+
+.user-profile {
+  display: flex;
+
+  &__avatar {
+    width: 30%;
+    text-align: center;
+
+    img {
+      display: inline-block;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
+
+  &__details {
+    width: 70%;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__statistic {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__statistic-item {
+    margin-right: 40px;
+  }
+
+  &__strong {
+    font-weight: $fw_semibold;
+  }
+}

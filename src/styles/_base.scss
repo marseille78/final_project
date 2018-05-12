@@ -5,13 +5,28 @@
 }
 
 body {
-  background-color: $global_bg;
-  font-family: $global_ff;
-  font-size: $global_fz;
-  line-height: $global_lh;
+  background-color: $bgc;
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+h1 {
+  font-size: $fz_h1;
+  line-height: $lh;
+  font-weight: $fw_light;
+}
+
+img {
+  max-width: 100%;
 }
 
 .app-container {
-  max-width: $global_maw;
+  max-width: $maw;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+.app-main {
+  padding-top: 144px;
 }

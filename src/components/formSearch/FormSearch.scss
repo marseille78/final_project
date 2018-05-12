@@ -65,7 +65,7 @@ $form-search_bgp-clear: (-278px -230px);
       display: inline-block;
       height: 10px;
       width: 10px;
-      background: url("#{$global_bgi-icons}") no-repeat $form-search_bgp-search;
+      background: url("#{$bgi-icons}") no-repeat $form-search_bgp-search;
       margin-right: 4px;
     }
   }
@@ -76,7 +76,7 @@ $form-search_bgp-clear: (-278px -230px);
     right: 5px;
     width: 20px;
     height: 20px;
-    background: url("#{$global_bgi-icons}") no-repeat $form-search_bgp-clear;
+    background: url("#{$bgi-icons}") no-repeat $form-search_bgp-clear;
     outline: none;
     opacity: 0;
   }
