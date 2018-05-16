@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { LogoComponent } from "../logo/Logo.Component";
+import { ControlsComponent } from "../controls/Controls.Component";
 import { FormSearchComponent } from "../formSearch/FormSearch.Component";
 
 import './Header.scss';
@@ -26,7 +27,9 @@ export class HeaderComponent extends React.Component<IHeaderProps> {
               onChangeValue={onChangeSearchValue}
             />
           </div>
-          <div className="app-header__item">Controls</div>
+          <div className="app-header__item">
+            <ControlsComponent />
+          </div>
         </div>
       </header>
     );

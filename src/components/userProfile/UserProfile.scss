@@ -2,6 +2,8 @@
 
 .user-profile {
   display: flex;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 
   &__avatar {
     width: 30%;

@@ -1,0 +1,40 @@
+@import "../../styles/vars";
+
+.nav-controls {
+  &__list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+  &__item {
+    margin-left: 5px;
+  }
+  &__link {
+    display: inline-block;
+    padding: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    &.active {
+      background-color: #e2e2e2;
+    }
+  }
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background: url("#{$bgi-icons}") no-repeat;
+
+  &--home,
+  &--about {
+    height: 24px;
+    width: 24px;
+  }
+  &--home {
+    background-position: -448px -479px;
+  }
+  &--about {
+    background-position: -79px -510px;
+  }
+}

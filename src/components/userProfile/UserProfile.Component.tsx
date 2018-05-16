@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { IUserProfile } from "../../types/app.types";
 import './UserProfile.scss';
+import { observer } from "mobx-react";
 
 interface IUserProfileProps {
   data: IUserProfile;
 }
 
+@observer
 export class UserProfileComponent extends React.Component<IUserProfileProps> {
   constructor(props: IUserProfileProps) {
     super(props);

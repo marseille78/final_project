@@ -34,7 +34,6 @@ export class FormSearchComponent extends React.Component<IFormSearchProps> {
 
   render() {
     const {placeholder, value} = this.props;
-    // console.log(this.props);
     return(
       <div className="form-search">
         <form action="" onSubmit={this.handleSubmit}>

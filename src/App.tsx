@@ -4,7 +4,11 @@ import { HeaderComponent } from "./components/header/Header.Component";
 import { ProfileProvider } from "./providers/profile.provider";
 import { ProfileStore } from "./stores/profile.store";
 import { observer } from "mobx-react";
-import { UserProfileComponent } from "./components/userProfile/UserProfile.Component";
+import { HashRouter as  Router, Route } from "react-router-dom";
+import { HomePage } from "./pages/Home";
+import { AboutPage } from "./pages/About";
+import { NotFoundPage } from "./pages/NotFound";
+import { Switch } from "react-router";
 
 interface IAppState {
   searchValue: string;
@@ -34,19 +38,30 @@ class App extends React.Component<{}, IAppState> {
   }
 
   render() {
+    console.log(profileStore.userProfile);
     return (
-      <div className="App">
-        <HeaderComponent
-          placeholder="Поиск"
-          searchValue={this.state.searchValue}
-          onChangeSearchValue={this.handleChangeSearchValue}
-        />
-        <main className="app-main">
-          <div className="app-container">
-            <UserProfileComponent data={profileStore.userProfile}/>
-          </div>
-        </main>
-      </div>
+      <Router>
+        <div className="App">
+          <HeaderComponent
+            placeholder="Поиск"
+            searchValue={this.state.searchValue}
+            onChangeSearchValue={this.handleChangeSearchValue}
+          />
+          <main className="app-main">
+            <div className="app-container">
+              <Switch>
+                <Route
+                  exact={true}
+                  path={'/'}
+                  render={({...props}) => <HomePage {...props} dataProfile={profileStore.userProfile}/>}
+                />
+                <Route path={'/about'} component={AboutPage} />
+                <Route exact={true} path={'*'} component={NotFoundPage} />
+              </Switch>
+            </div>
+          </main>
+        </div>
+      </Router>
     );
   }
 }
