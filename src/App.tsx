@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './App.scss';
 import { HeaderComponent } from "./components/header/Header.Component";
-import { ProfileProvider } from "./providers/profile.provider";
-import { ProfileStore } from "./stores/profile.store";
+// import { ProfileProvider } from "./providers/profile.provider";
+// import { ProfileStore } from "./stores/profile.store";
 import { observer } from "mobx-react";
 import { HashRouter as  Router, Route } from "react-router-dom";
 import { HomePage } from "./pages/Home";
@@ -14,8 +14,8 @@ interface IAppState {
   searchValue: string;
 }
 
-const profileProvider = new ProfileProvider();
-const profileStore = new ProfileStore(profileProvider);
+// const profileProvider = new ProfileProvider();
+// const profileStore = new ProfileStore(profileProvider);
 
 @observer
 class App extends React.Component<{}, IAppState> {
@@ -33,12 +33,7 @@ class App extends React.Component<{}, IAppState> {
     });
   }
 
-  componentDidMount() {
-    profileStore.init();
-  }
-
   render() {
-    console.log(profileStore.userProfile);
     return (
       <Router>
         <div className="App">
@@ -53,7 +48,7 @@ class App extends React.Component<{}, IAppState> {
                 <Route
                   exact={true}
                   path={'/'}
-                  render={({...props}) => <HomePage {...props} dataProfile={profileStore.userProfile}/>}
+                  render={({...props}) => <HomePage {...props}/>}
                 />
                 <Route path={'/about'} component={AboutPage} />
                 <Route exact={true} path={'*'} component={NotFoundPage} />
