@@ -3,11 +3,13 @@
 .user-profile {
   display: flex;
   padding-bottom: 44px;
+  margin-bottom: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 
   &__avatar {
     width: 30%;
     text-align: center;
+    padding-right: 15px;
 
     img {
       display: inline-block;
@@ -36,5 +38,30 @@
 
   &__strong {
     font-weight: $fw_semibold;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .user-profile {
+    flex-direction: column;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    &__statistic-item {
+      display: flex;
+      flex-direction: column-reverse;
+
+      &:last-child {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .user-profile {
+    &__statistic {
+      flex-direction: column;
+    }
   }
 }

@@ -30,15 +30,19 @@ $h: 84px;
 
 @media only screen and (max-width: 520px) {
   .app-header {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 10px 0;
+    flex-wrap: wrap;
 
     &__item {
-      width: 20%;
-
       &:nth-child(2) {
-        flex-grow: 1;
+        order: 1;
+        width: 100%;
+        margin-top: auto;
       }
+    }
+
+    .app-container {
+      flex-wrap: wrap;
     }
   }
 }

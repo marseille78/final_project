@@ -17,8 +17,8 @@ export const MediaListItemComponent: React.SFC<Props> = (props: Props) => {
         alt=""
       />
       <div className="media-item__activity">
-        <div className="media-item__likes">Likes: {likes}</div>
-        <div className="media-item__comments">Comments: {comments}</div>
+        <div className="media-item__likes">{likes}</div>
+        <div className="media-item__comments">{comments}</div>
       </div>
     </div>
   );

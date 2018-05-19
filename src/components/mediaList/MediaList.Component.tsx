@@ -2,6 +2,8 @@ import * as React from 'react';
 import { IMedia } from "../../types";
 import { MediaListItemComponent } from "./MediaListItem.Component";
 
+import './MediaList.scss';
+
 interface Props {
   mediaList: Array<IMedia>;
 }

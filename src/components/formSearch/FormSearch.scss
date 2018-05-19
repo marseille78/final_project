@@ -81,3 +81,11 @@ $form-search_bgp-clear: (-278px -230px);
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 520px) {
+  .form-search {
+    &__item {
+      margin: 0 auto;
+    }
+  }
+}
