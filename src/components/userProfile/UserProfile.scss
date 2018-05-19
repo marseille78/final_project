@@ -4,10 +4,12 @@
   display: flex;
   padding-bottom: 44px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  margin-bottom: 50px;
 
   &__avatar {
     width: 30%;
     text-align: center;
+    padding-right: 15px;
 
     img {
       display: inline-block;
@@ -36,5 +38,16 @@
 
   &__strong {
     font-weight: $fw_semibold;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .user-profile {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    &__statistic {
+      flex-direction: column;
+    }
   }
 }
