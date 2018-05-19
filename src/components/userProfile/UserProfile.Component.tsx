@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IUserProfile } from "../../types";
+import { IUserProfile } from "../../types/app.types";
 import './UserProfile.scss';
 import { observer } from "mobx-react";
 

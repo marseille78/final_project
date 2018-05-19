@@ -10,9 +10,3 @@ $bgp: (-177px -264px);
   width: $w;
   background: url("#{$bgi}") no-repeat $bgp;
 }
-
-@media only screen and (max-width: 767px) {
-  .logo {
-    width: $h;
-  }
-}
